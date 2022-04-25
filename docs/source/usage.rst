@@ -3,32 +3,29 @@ Usage
 
 .. _installation:
 
-Installation
+API Key
 ------------
 
-To use Lumache, first install it using pip:
+To use koolproxies, first get a API key from https://proxies.kool.services
+
+For the documentation, we will be acting like the API key is:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   dev-key
 
-Creating recipes
+Using the API
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+There are no language client libraries right now but you can easily use a HTTP client library for your language.
+The base API host of koolproxies is ``api.proxies.kool.services``.
 
-.. autofunction:: lumache.get_random_ingredients
+When sending requests, add the API key to the ``Authorization`` header, make sure the prefix is **APIKEY**.
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+To do a basic ping of the API with curl:
 
-.. autoexception:: lumache.InvalidKindError
+.. code-block:: console
 
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+   curl -h "Authorization: APIKEY dev-key" https://api.proxies.kool.services/api/v1/ping
+   
+   
