@@ -1,7 +1,7 @@
 Usage
 =====
 
-.. _installation:
+.. _api_key:
 
 API Key
 ------------
@@ -13,6 +13,8 @@ For the documentation, we will be acting like the API key is:
 .. code-block:: console
 
    dev-key
+
+.. _using_api:
 
 Using the API
 ----------------
@@ -26,6 +28,6 @@ To do a basic ping of the API with curl:
 
 .. code-block:: console
 
-   curl -h "Authorization: APIKEY dev-key" https://api.proxies.kool.services/api/v1/ping
+   curl -H "Authorization: APIKEY dev-key" https://api.proxies.kool.services/api/v1/ping
    
    
